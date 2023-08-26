@@ -1,0 +1,241 @@
+body{
+    background-image: url(theater1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    font-family: 'Ysabeau Infant', sans-serif;
+}
+.body1{
+  font-family: 'Ysabeau Infant', sans-serif;
+  
+}
+.arrow{
+  width: 10px;
+  height: 30px;
+}
+.arrowtop{
+  margin:5px auto;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    margin:50px 150px;
+}
+.head,.link
+{
+    color:white;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    gap:30px;
+}
+.head{
+    margin:50px;
+}
+.nowshowing{
+    margin: 50px auto;
+}
+.link a{
+    text-decoration: none;
+    color: white;
+}
+.carousel a img{
+ 
+ background-color: #343F4F;
+ /* height: 590px; */
+ object-fit: cover;
+ margin:30px 10px;
+}
+.carousel{
+    /* display: flex; */
+    
+    transition: 2s;
+    transition: transform 0.5s;
+    gap:100px;
+} 
+.carousel img:hover{
+    transform: translateY(-20px);
+} 
+.main img
+{
+     width: 250px;
+     height: 350px;
+     object-fit: cover;
+     border: 3px solid rgb(226, 43, 74);
+     margin-top: 70px;
+
+}
+.mainsection
+{
+    display: flex;
+   justify-content: center;
+   margin-top: -50px;
+    
+}
+
+.description
+{
+    background-color: orangered;
+    width:600px;
+    height:120px;
+    border-radius: 8px;
+    padding-top: 20px;
+    margin: 70px auto 10px 20px;
+}
+.description h1
+{
+    color: white;
+    font-size:20px;
+    margin-bottom: 8px;
+    margin-left: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.description p{
+  color: white;
+    font-size:15px;
+    margin-bottom: 8px;
+    margin-left: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.reservation
+{
+    background-color: white;
+    padding: 15px 25px;
+    margin-left: 20px;
+    border-radius: 8px;
+    width: 600px;
+    height: 380px;
+}
+.reservation label{
+    
+    font-family: 'Poppins', sans-serif;
+
+}
+.name{
+  display: flex;
+  
+}
+.inputs{
+  display: flex;
+  flex-direction: column;
+  width:150px;
+  margin: 15px auto -15px auto;
+  margin:10px;
+}
+#p{
+  width:100px;
+  margin-left: -150px;
+}
+.select{
+  width: 130px;
+  border-radius: 5px;
+  padding: 0.5px;
+  height: 35px;
+  margin-left: 15px;
+}
+.second{
+  margin-top: -15px;
+}
+.b1{
+    background-color: orangered;
+    border: none;
+    width: 70px;
+    height: 30px;
+    border-radius: 3px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: 0.4;
+    display: block;
+    margin-top: -30px;
+}
+.b1:hover{
+    opacity: 0.8;
+}
+.a1{
+    margin-left: 30px;
+}
+.r2{
+    margin-left: 10px;
+}
+
+
+
+/* draggable slider css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.wrapper{
+  display: flex;
+  max-width: 1200px;
+  position: relative;
+}
+.wrapper i{
+  top: 50%;
+  height: 44px;
+  width: 44px;
+  color: #343F4F;
+  cursor: pointer;
+  font-size: 1.15rem;
+  position: absolute;
+  text-align: center;
+  line-height: 44px;
+  background: #fff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.wrapper i:active{
+  transform: translateY(-50%) scale(0.9);
+}
+.wrapper i:hover{
+  background: #f2f2f2;
+}
+.wrapper i:first-child{
+  left: -22px;
+  display: none;
+}
+.wrapper i:last-child{
+  right: -22px;
+}
+.wrapper .carousel{
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+.carousel.dragging{
+  cursor: grab;
+  scroll-behavior: auto;
+}
+.carousel.dragging img{
+  pointer-events: none;
+}
+.carousel img{
+  height: 500px;
+  object-fit: cover;
+  user-select: none;
+  margin-left: 14px;
+  width: calc(100% / 3);
+}
+.carousel img:first-child{
+  margin-left: 0px;
+}
+
+@media screen and (max-width: 900px) {
+  .carousel img{
+    width: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .carousel img{
+    width: 100%;
+  }
+}
+

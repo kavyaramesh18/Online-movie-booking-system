@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+   
+    <style>
+         *{
+    margin: 0;
+    padding: 0;
+}
+.outercontainer{
+    background-color: #380f1d;
+    height: 99.9vh;
+    width: 99.9vw;
+    overflow: hidden;
+}
+.containers{
+    margin:50px auto;
+    padding:20px;
+    height: 450px;
+    width: 400px;
+    background-color: hsl(30, 50%, 65%);
+    border: 2px solid rgb(179, 178, 178);
+    opacity: 0.75;
+}
+label{
+ font-size: 20px ;
+}
+.inputs{
+    width: 300px;
+    height: 10px;
+   
+    padding:7px;
+    font-size: 20px;
+    margin:20px;
+}
+.btn{
+    height: 40px;
+    padding: 5px;
+    width: 150px;
+    /* margin-top: 10px; */
+    font-size: large;
+    background-color:#380f1d;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 120px;
+    color: white;
+}
+.link a :hover{
+    color: #7f81ff;
+}
+.head,.link
+{
+    color:white;
+    text-decoration: none;
+    display: flex;
+    justify-content: right;
+    gap:30px;
+}
+.head{
+   
+    background-color: #af1016e4;
+    padding: 25px;
+   
+    text-align: right;
+}
+.link a{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    padding-right: 50px;
+    
+}
+    </style>
+</head>
+<body>
+    <form action="table2.php" method="post" >
+        
+         <div class="outercontainer">
+    <div class="head">
+    <div class="link">
+        <p><a href="">Home</a></p>
+        <p><a href="index.html">Movies</a></p>
+        <p><a href="registeration.html">Register</a></p>
+        <p><a href="newlogin.html">Login</a></p>
+    </div>
+</div>
+
+        <div class="containers">
+    <h2 style="text-align: center;">Sign in</h2>
+    <br>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required class="inputs" placeholder="Enter your name"><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required class="inputs" placeholder="Enter your Email"><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required class="inputs" placeholder="Enter password"><br>
+
+        <label for="mobile">Mobile Number:</label><br>
+        <input type="tel" id="mobile" name="mobile_no" pattern="[0-9]{10}" required class="inputs" placeholder="Enter Mobile No."><br>
+
+        <a href="index.html"><button type="submit" class="btn">Sign in</button></a>
+    </form>
+    </div>
+    </div>
+</body>
+</html>

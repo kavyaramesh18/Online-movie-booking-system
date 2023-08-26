@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Theater | Seat Reservation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ysabeau+Infant:ital,wght@0,100;0,500;1,300&display=swap" rel="stylesheet">
+</head>
+<style>
+    .inputs{
+        margin:10px;
+    }
+    #p{
+        width: 100px;
+    }
+</style>
+<body>
+    <form action="register.php" method="post" enctype="multipart/form-data">
+    <div class="head">
+        <h2>Movie Theater Seat Reservation</h2>
+        <div class="link">
+           <p><a href="">Home</a></p>
+           <p><a href="index.html">Movies</a></p>
+        </div>
+    </div>
+    <div class="mainsection">
+    <div class="main">
+        <img src="yjyd 1.jpg" alt="3 idiots">
+    </div>
+    <div class="main2">
+          <div class="description">
+            <h1 class="i1">Yeh Jawaani Hai Deewani</h1>
+            <p>Description:<i>Coming-of-age romance, friendship, and self-discovery, sprinkled with nostalgic moments.</i></p>
+            <p>Duration:<i>02:40 mins</i></p>
+          </div>
+          <div class="reservation">
+            <h2 class="a1">Reserve your seat here</h2>
+
+        <div class="name">
+            <div class="inputs">
+            <label class="l2" >First_name</label>
+            <input type="text" name="fn">
+            </div>
+          <div class="inputs">
+            <label class="l1">Last_name</label>
+            <input type="text" class="" name="ln">
+        </div>
+        <div class="inputs">
+            <label class="l3">Contact_no</label>
+            <input type="text" class="r2" name="c"><br><br>
+        </div>
+        </div>
+            <label style="margin-left:15px">Theater</label><br>
+            <select name="theater" id="theater" class="select">
+                <option value="">3D</option>
+                <option value="">Cinema 2</option>
+                <option value="">Theatre 1</option>
+            </select><br><br>
+            <label style="margin-left:15px">Choose seat group<br></label>
+            <select name="seat" id="seat" class="select">
+                <option value="">Fixed back</option>
+                <option value="">Swing back</option>
+                <option value="">VIP Cinema seating</option>
+            </select><br><br>
+        <div class="name second">
+            <div class="inputs">
+            <label>No.of Seats</label>
+            <input type="number" name="qty" id="q" oninput="computecost()">
+        </div>
+        <div class="inputs">
+            <label>Date</label>
+            <input type="date" name="date" id="">
+        </div>
+          <div class="inputs">
+            <label>Time</label>
+            <input type="time" name="time" id=""><br><br>
+        </div>
+        <div class="inputs">
+            <input type="text" name="movie" id="" value="Yeh Jawaani Hai Deewani" style="visibility:hidden;"><br><br>
+      </div>
+      <div class="inputs">
+        <label style="margin-left: -150px;">Price</label>
+        <input type="text" name="price" value="200" id="p" oninput="computecost()" style="margin-left: -150px;">
+    </div>
+    <div class="inputs">
+        <input type="text" name="totall" id="total" readonly style="visibility:hidden;">
+    </div>
+    <div class="inputs">
+        <input type="text" name="id" style="visibility:hidden;">
+    </div>
+    </div>
+           <button type="submit" class="b1">Book</button>
+
+          </div>
+    </div>
+    </div>
+</form>
+<script>
+    function computecost()
+{
+    var k=document.getElementById("q").value;
+    var m=document.getElementById("p").value;
+    var total=k*m;
+    document.getElementById("total").value=total;
+}
+</script>
+</body>
+</html>
